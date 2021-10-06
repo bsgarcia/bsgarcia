@@ -72,7 +72,7 @@
                 <!-- Trigger the Modal -->
                 <div id='loading' class='container loading'>
                     <div class='img-loading'>
-                        <img id="space" onload='removeLoading()' class="img-fluid" loading="lazy" src="img/shooter.gif" style="width:100%;max-width:300px; height: auto;
+                        <img id="space" class="img-fluid" loading="lazy" src="img/shooter.gif" style="width:100%;max-width:300px; height: auto;
                         float: right; margin-left: 15px; margin-bottom: 15px;
                         border-radius: 1%; cursor: pointer; border: 2px solid black">
                     </div>
@@ -195,6 +195,7 @@
        let el = document.getElementById('loading');
        el.className = el.className.replace('loading', '');
     }
+    document.getElementById('space').onload(removeLoading);
 
 </script>
 
