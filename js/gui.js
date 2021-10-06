@@ -39,8 +39,9 @@ export class GUI {
         const captionText = document.getElementById(`${name}Caption`);
         img.onclick = function () {
             modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
+            modalImg.src = this.style.backgroundImage
+                .replace('url(', '').replace(')', '').replace('"', '').replace('"', '');
+            // captionText.innerHTML = this.alt;
         }
 
         // Get the <span> element that closes the modal

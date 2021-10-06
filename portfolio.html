@@ -71,11 +71,13 @@
                 <h1 class="border-bottom"> RL Space Shooter</h1>
                 <!-- Trigger the Modal -->
                 <div id='loading' class='container loading'>
-                    <div class='img-loading'>
-                        <img id="space" class="img-fluid" src="img/shooter.gif" style="width:100%;max-width:300px; height: auto;
+                    <!-- <div class='img-loading'> -->
+                        <div id='space' class='img-loading' style="background-image: url('img/shooter.gif'); background-size: contain ;
+                        width:290px;max-width:290px; height: 380px;
                         float: right; margin-left: 15px; margin-bottom: 15px;
-                        border-radius: 1%; cursor: pointer; border: 2px solid black">
-                    </div>
+                        border-radius: 1%; cursor: pointer; "></div>
+                        <!-- <img id="space" class="img-fluid" loading="lazy" src="img/shooter.gif" style="">  --> 
+                    <!-- </div> -->
                 </div>
                 
                 <p style="float: left; text-align: justify; margin-bottom: 15px">
@@ -196,7 +198,13 @@
        el.className = el.className.replace('loading', '');
     }
 
-    $('#space').ready(removeLoading);
+    $('#space').ready(function(){
+        if ($(this).height() > 100) {
+           removeLoading();
+           $('#space').css('border', '2px solid black');
+        }
+    });
+
 
 </script>
 
