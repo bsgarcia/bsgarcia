@@ -195,7 +195,8 @@
        let el = document.getElementById('loading');
        el.className = el.className.replace('loading', '');
     }
-    document.getElementById('space').onload(removeLoading);
+
+    $('#space').ready(removeLoading);
 
 </script>
 
