@@ -11,16 +11,57 @@
 
 .filter-green {
     margin-bottom: 11px;
-    width: 4%;
+    width: 29px;
     float: left;
-    padding-top: 45px;
+    padding-top: 44px;
     margin-right: 6px;
 }
 
 .filter-green:hover {
-    filter: invert(53%) sepia(60%) saturate(387%) hue-rotate(99deg) brightness(86%) contrast(90%);
+    /* filter: invert(53%) sepia(60%) saturate(387%) hue-rotate(99deg) brightness(86%) contrast(90%); */
+    filter: invert(55%) sepia(12%) saturate(1885%) hue-rotate(99deg) brightness(92%) contrast(86%);
+    /* background-color: #3b9b6d; */
     cursor: pointer;
 }
+.img-loading {
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  background-color: #babbbc;
+}
+
+.container.loading .img-loading, .container.loading .stripe {
+  animation: hintloading 2s ease-in-out 0s infinite reverse;
+  -webkit-animation: hintloading 2s ease-in-out 0s infinite reverse;
+}
+
+@keyframes hintloading
+{
+  0% {
+    opacity: 0.5;
+  }
+  50%  {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes hintloading
+{
+  0% {
+    opacity: 0.5;
+  }
+  50%  {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
 
 .btn {
     display: inline-block;
