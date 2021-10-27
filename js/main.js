@@ -47,6 +47,7 @@ function main() {
 
     GUI.setModal('space');
     GUI.setModal('pgg');
+    GUI.setModal('duopoly')
 
     $('#demoPGG').click(createPGGGame);
 
