@@ -13,15 +13,15 @@ export class GUI {
         $('#publications').hide();
         $('#teachings').hide();
         $('#poster').hide();
-        // $('#pgg').hide();
-        
-        // $('#spacerl').hide()
-        // $('#about-section').hide();
+                // $('#about-section').hide();
     }
 
     static showItems() {
         // $('#about-section').show(700);
         // $('#pgg').show(500)
+        $('#pgg').show(1200);
+        $('#duopoly').hide(900)
+
         $('#publications').show(900);
         $('#teachings').show(1200);
         $('#poster').show(1500);
@@ -51,6 +51,12 @@ export class GUI {
             modal.style.display = "none";
         }
 
+    }
+
+    static async getPage(file) {
+        return fetch(file)
+        .then(response => response.text())
+        .then(text => text);
     }
 
 }

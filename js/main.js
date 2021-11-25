@@ -3,10 +3,24 @@ import {createPGGGame} from "./requests.js";
 
 $(document).ready(main);
 
+let indexPage;
+let portfolioPage;
 
 function main() {
+    index();
+    $('#about').click(index);
+    $('#portfolio').click(portfolio);
+}
 
+async function index() {
+    if (indexPage === undefined) {
+        indexPage = await GUI.getPage('html/index.html');
+    }
+
+    // $('#main').show(200)
+    $('#main').html(indexPage);
     GUI.hideItems();
+    $('#portfolio').removeClass('active');
 
     GUI.addYear(2021, 'publications');
     GUI.addPublication(
@@ -43,12 +57,28 @@ function main() {
         }
     );
 
-    GUI.showItems();
+    // $('#main').show();
 
+    GUI.showItems();
+}
+
+
+async function portfolio() {
+    $('#about').removeClass('active');
+
+    if (portfolioPage === undefined) {
+        portfolioPage = await GUI.getPage('html/portfolio.html');
+    }
+
+    $('#main').hide();
+    $('#main').html(portfolioPage);
+    $('#main').show(500);
+
+    // await GUI.showPage('html/portfolio.html');
+    
     GUI.setModal('space');
     GUI.setModal('pgg');
     GUI.setModal('duopoly')
 
     $('#demoPGG').click(createPGGGame);
-
 }
