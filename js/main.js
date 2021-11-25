@@ -72,7 +72,7 @@ async function portfolio() {
 
     $('#main').hide();
     $('#main').html(portfolioPage);
-    $('#main').show(500);
+    $('#main').slideDown(1000);
 
     // await GUI.showPage('html/portfolio.html');
     
