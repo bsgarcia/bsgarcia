@@ -19,8 +19,8 @@ export class GUI {
     static showItems() {
         // $('#about-section').show(700);
         // $('#pgg').show(500)
-        $('#pgg').show(1200);
-        $('#duopoly').hide(900)
+        // $('#pgg').show(1200);
+        // $('#duopoly').hide(900)
 
         $('#publications').show(900);
         $('#teachings').show(1200);

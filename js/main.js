@@ -79,7 +79,13 @@ async function portfolio() {
 
     $('#main').hide();
     $('#main').html(portfolioPage);
-    $('#main').slideDown(1000);
+    $('#main').fadeIn(50);
+    $('#duopolyBox').hide();
+    $('#pggBox').hide();
+
+
+    $('#duopolyBox').slideDown(800);
+    $('#pggBox').slideDown(1000);
 
     // await GUI.showPage('html/portfolio.html');
     
