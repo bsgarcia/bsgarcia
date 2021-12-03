@@ -8,9 +8,12 @@ let portfolioPage;
 
 
 function main() {
-    particlesJS.load('particles-js', 'particlesjs-config.json', function() {
-        console.log('callback - particles.js config loaded');
-    });
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	if (!isMobile) {
+        particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+	}
     index();
     $('#about').click(index);
     $('#portfolio').click(portfolio);
