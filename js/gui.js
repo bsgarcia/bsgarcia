@@ -54,6 +54,7 @@ export class GUI {
     }
 
     static async getPage(file) {
+        $('#main').html('<div class="spinner"><div></div><div></div><div></div></div>');
         return fetch(file)
         .then(response => response.text())
         .then(text => text);
