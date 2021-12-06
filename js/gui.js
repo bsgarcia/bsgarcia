@@ -54,10 +54,15 @@ export class GUI {
     }
 
     static async getPage(file) {
-        $('#main').html('<div class="spinner"><div></div><div></div><div></div></div>');
-        return fetch(file)
-        .then(response => response.text())
-        .then(text => text);
+        $('#main').html(
+            '<div class="spinner"><div></div><div></div><div></div></div>');
+        let text = fetch(file)
+            .then(response => response.text())
+            .then(text => text);
+        await delay(500);
+        return text;
     }
 
 }
+
+const delay = ms => new Promise(res => setTimeout(res, ms));
