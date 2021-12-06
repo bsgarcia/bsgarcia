@@ -2,7 +2,7 @@ export class GUI {
 
     static addYear(year, divId) {
         $(`#${divId}`).append(
-            `<b style="font-size: 15px; margin-bottom: 1px; border-bottom: 1px #3b9b6d solid">${year}</b>`);
+            `<b style="font-size: 15px; margin-bottom: 1px;">${year}</b>`);
     }
     static addPublication({ href, html } = {}) {
         $("#publications").append(
