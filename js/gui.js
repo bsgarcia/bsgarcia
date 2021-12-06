@@ -59,7 +59,7 @@ export class GUI {
         let text = fetch(file)
             .then(response => response.text())
             .then(text => text);
-        await delay(500);
+        await delay(300);
         return text;
     }
 
