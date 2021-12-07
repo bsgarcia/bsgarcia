@@ -1051,7 +1051,7 @@ a {
  */
 
 .site-nav {
-    line-height: 130px;
+    line-height: 5.05;
 }
 
 .active:not(:first-child) {
