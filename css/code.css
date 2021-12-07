@@ -314,7 +314,7 @@ button {
 
 .site-title {
     font-size: 26px;
-    line-height: 56px;
+    line-height: 5.05;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
@@ -553,7 +553,7 @@ pre>code {
 
 .site-nav {
     float: right;
-    line-height: 56px;
+    line-height: 9.7 !important;
 }
 
 .site-nav .menu-icon {
@@ -562,12 +562,12 @@ pre>code {
 
 .site-nav .page-link {
     color: #333;
-    line-height: 1.5;
+    /* line-height: 1.5; */
 }
 
 .page-link:active {
     border-bottom: 3px solid #3b9b6d;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
     -webkit-transition: border-bottom 0.025s ease;
     -moz-transition: border-bottom 0.025s ease;
     -o-transition: border-bottom 0.025s ease;
@@ -1126,7 +1126,7 @@ strong {
 }
 
 .site-title {
-    line-height: 130px;
+    line-height: 5.05;
     /*    margin-left: -50px;*/
 }
 
