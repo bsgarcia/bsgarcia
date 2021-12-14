@@ -314,7 +314,7 @@ button {
 
 .site-title {
     font-size: 26px;
-    line-height: 115px;
+    line-height: 130px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
@@ -545,7 +545,7 @@ pre>code {
 
 .site-title {
     font-size: 26px;
-    line-height: 56px;
+    /* line-height: 56px; */
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
@@ -1051,7 +1051,7 @@ a {
  */
 
 .site-nav {
-    line-height: 115px !important;
+    line-height: 130px !important;
 }
 
 .active:not(:first-child) {
@@ -1126,7 +1126,7 @@ strong {
 }
 
 .site-title {
-    line-height: 115px;
+    line-height: 130px;
     /*    margin-left: -50px;*/
 }
 
