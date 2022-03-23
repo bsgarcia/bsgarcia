@@ -71,6 +71,7 @@ async function index() {
 
 
 async function portfolio() {
+    GUI.toggleDarkMode();
     $('#about').removeClass('active');
 
     if (portfolioPage === undefined) {
@@ -93,5 +94,5 @@ async function portfolio() {
     GUI.setModal('pgg');
     GUI.setModal('duopoly')
 
-    $('#demoPGG').click(createPGGGame);
+    // $('#demoPGG').click(createPGGGame);
 }

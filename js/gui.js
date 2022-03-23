@@ -1,5 +1,9 @@
 export class GUI {
 
+    static toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+
     static addYear(year, divId) {
         $(`#${divId}`).append(
             `<b style="font-size: 15px; margin-bottom: 1px; border-bottom: 1px #3b9b6d solid">${year}</b>`);
