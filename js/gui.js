@@ -8,9 +8,15 @@ export class GUI {
         $(`#${divId}`).append(
             `<b style="font-size: 15px; margin-bottom: 1px; border-bottom: 1px #3b9b6d solid">${year}</b>`);
     }
-    static addPublication({ href, html } = {}) {
+    static addPublication({ href, html, tag} = {}) {
+        if (tag === 'under review') {
+            tag = '<span class="tag orange"> <span class="fa fa-hourglass"> </span> under review</span>'
+        } else {
+            tag = '<span class="tag blue"> <span class="fa fa-check"> </span> published</span>'
+        }
+
         $("#publications").append(
-            `<div class="post" onclick="window.open('${href}', '_blank').focus()">${html}</div>`)
+            `<div class="post" onclick="window.open('${href}', '_blank').focus()"> ${tag}${html}</div>`)
     }
 
     static hideItems() {
