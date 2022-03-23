@@ -29,6 +29,16 @@ async function index() {
     GUI.hideItems();
     $('#portfolio').removeClass('active');
 
+    GUI.addYear(2022, 'publications');
+    GUI.addPublication(
+        {
+            href: 'https://psyarxiv.com/d59tz/',
+            html: `<h1> The impassable gap between experiential and symbolic values</h1>
+                        <h2><b>Garcia, B.</b>, Lebreton, M., Bourgeois-Gironde, S. & Palminteri, S. </h2>
+                        <h3>Nature Human Behaviour <b>(under review)</b></h3>`
+        }
+    );
+
     GUI.addYear(2021, 'publications');
     GUI.addPublication(
         {
