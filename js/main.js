@@ -1,5 +1,5 @@
 import { GUI } from "./gui.js";
-import { createPGGGame } from "./requests.js";
+//import { createPGGGame } from "./requests.js";
 
 $(document).ready(main);
 
