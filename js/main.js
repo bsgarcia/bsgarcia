@@ -37,7 +37,7 @@ async function index() {
                         <h2><b>Garcia, B.</b>, Lebreton, M., Bourgeois-Gironde, S. & Palminteri, S. </h2>
                         <h3>Nature Human Behaviour</h3>`,
 
-            tag: 'under review'
+            tag: 'accepted'
         }
     );
 

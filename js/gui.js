@@ -11,6 +11,8 @@ export class GUI {
     static addPublication({ href, html, tag} = {}) {
         if (tag === 'under review') {
             tag = '<span class="tag orange"> <span class="fa fa-hourglass"> </span> under review</span>'
+        } else if (tag === 'accepted') {
+            tag = '<span class="tag green"> <span class="fa fa-check"> </span> accepted</span>'
         } else {
             tag = '<span class="tag blue"> <span class="fa fa-check"> </span> published</span>'
         }
