@@ -10,9 +10,9 @@ let portfolioPage;
 function main() {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (!isMobile) {
-        particlesJS.load('particles-js', 'particlesjs-config.json', function () {
-            console.log('callback - particles.js config loaded');
-        });
+        // particlesJS.load('particles-js', 'particlesjs-config.json', function () {
+            // console.log('callback - particles.js config loaded');
+        // });
     }
     index();
     $('#about').click(index);
