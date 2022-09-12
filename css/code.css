@@ -1147,7 +1147,7 @@ h4 {
 h1 {
     color: #3b9b6d;
     font-weight: 700;
-    font-variant: small-caps;
+    /* font-variant: small-caps; */
     /*border-bottom: 1.5px dotted #3b9b6d;*/
     width: 100%;
     /*letter-spacing: +0.025em;*/
@@ -1158,7 +1158,7 @@ h1 {
 h1.border-bottom {
     color: #3b9b6d;
     font-weight: 700;
-    font-variant: small-caps;
+    /* font-variant: small-caps; */
     border-bottom: 1.8px dotted #3b9b6d;
     width: 100%;
     /* padding-top: 0.5em; */
