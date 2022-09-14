@@ -5,8 +5,8 @@ $(document).ready(main);
 
 let indexPage;
 let portfolioPage;
-let goToPortfolio = URLSearchParams(window.location.search).get('portfolio');
-
+let goToPortfolio = new URLSearchParams(window.location.search).get('portfolio');
+// alert("hello")
 
 function main() {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -88,14 +88,15 @@ async function index() {
 
 async function portfolio() {
     GUI.toggleDarkMode();
-    $('#about').removeClass('active');
 
+    $('#about').removeClass('active');
     if (portfolioPage === undefined) {
         portfolioPage = await GUI.getPage('html/portfolio.html');
     }
 
     $('#main').hide();
     $('#main').html(portfolioPage);
+    $('#about').removeClass('active');
     $('#main').fadeIn(50);
     $('#duopolyBox').hide();
     $('#pggBox').hide();
