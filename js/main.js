@@ -5,6 +5,7 @@ $(document).ready(main);
 
 let indexPage;
 let portfolioPage;
+let goToPortfolio = URLSearchParams(window.location.search).get('portfolio');
 
 
 function main() {
@@ -17,6 +18,9 @@ function main() {
     index();
     $('#about').click(index);
     $('#portfolio').click(portfolio);
+    if (goToPortfolio) {
+        portfolio();
+    }
 }
 
 async function index() {
