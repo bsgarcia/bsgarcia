@@ -39,9 +39,9 @@ async function index() {
             href: 'https://www.nature.com/articles/s41562-022-01496-3',
             html: `<h1> Experiential values are underweighted in decisions involving symbolic options</h1>
                         <h2><b>Garcia, B.</b>, Lebreton, M., Bourgeois-Gironde, S. & Palminteri, S. </h2>
-                        <h3>Nature Human Behaviour</h3>`,
+                        <h3>Nature Human Behaviour</h3>`
 
-            tag: 'published'
+            // tag: 'in press'
         }
     );
 

@@ -39,10 +39,8 @@ export class GUI {
        // $('#poster').show(1500);
        // // the equivalent of the above lines but in pure javascript
         document.getElementById('publications').style.display = 'block';
+        document.getElementById('poster').style.display = 'block';
         document.getElementById('teachings').style.display = 'block';
-
-        
-        
     }
 
     static setModal(name) {
