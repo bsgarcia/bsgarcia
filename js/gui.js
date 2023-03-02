@@ -1,12 +1,27 @@
 export class GUI {
 
+    static slideDown(id, time) {
+        // TODO: rewrite
+        let el = document.getElementById(id);
+        el.style.display = 'block';
+        el.style.transition = `height ${time}ms ease-out`;
+        let height = el.clientHeight + .3 * el.clientHeight;
+        el.style.height = `0px`
+        // el.style.overflow = 'hidden';
+        setTimeout(() => {
+            el.style.height = `${height}px`
+
+        }, 30);
+        
+    }
     static toggleDarkMode() {
         document.body.classList.toggle('dark-mode');
     }
 
     static addYear(year, divId) {
-        $(`#${divId}`).append(
-            `<b style="font-size: 15px; margin-bottom: 1px; border-bottom: 1px #3b9b6d solid">${year}</b>`);
+        // equivalent of the above line but in pure javascript
+        document.querySelector(`#${divId}`).innerHTML +=
+            `<b style="font-size: 15px; margin-bottom: 1px; border-bottom: 1px #3b9b6d solid">${year}</b>`;
     }
     static addPublication({ href, html, tag} = {}) {
         if (tag === 'under review') {
@@ -17,14 +32,18 @@ export class GUI {
             tag = '<span class="tag blue"> <span class="fa fa-check"> </span> published</span>'
         }
 
-        $("#publications").append(
-            `<div class="post" onclick="window.open('${href}', '_blank').focus()"> ${tag}${html}</div>`)
+        document.querySelector("#publications").innerHTML +=
+            `<div class="post" onclick="window.open('${href}', '_blank').focus()"> ${tag}${html}</div>`
     }
 
     static hideItems() {
-        $('#publications').hide();
-        $('#teachings').hide();
-        $('#poster').hide();
+        // $('#publications').hide();
+        // $('#teachings').hide();
+        // $('#poster').hide();
+        // equivalent of the above lines but in pure javascript
+        document.getElementById('publications').style.display = 'none';
+        document.getElementById('poster').style.display = 'none';
+        document.getElementById('teachings').style.display = 'none';
                 // $('#about-section').hide();
     }
 
@@ -70,8 +89,7 @@ export class GUI {
     }
 
     static async getPage(file) {
-        $('#main').html(
-            '<div class="spinner"><div></div><div></div><div></div></div>');
+        document.querySelector('#main').innerHTML = '<div class="spinner"><div></div><div></div><div></div></div>'
         let text = fetch(file)
             .then(response => response.text())
             .then(text => text);

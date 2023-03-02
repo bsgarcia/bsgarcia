@@ -1,7 +1,9 @@
 import { GUI } from "./gui.js";
-//import { createPGGGame } from "./requests.js";
 
-$(document).ready(main);
+
+// run main when the page is loaded
+document.addEventListener('DOMContentLoaded', main);
+
 
 let indexPage;
 let portfolioPage;
@@ -16,22 +18,26 @@ function main() {
         // });
     }
     index();
-    $('#about').click(index);
-    $('#portfolio').click(portfolio);
+    // equivalent in pure javascript
+    document.getElementById('about').addEventListener('click', index);
+    document.getElementById('portfolio').addEventListener('click', portfolio);
     if (goToPortfolio) {
         portfolio();
     }
 }
 
 async function index() {
+
+    document.getElementById('portfolio').classList.remove('active');
+    document.getElementById('about').classList.add('active');
+
     if (indexPage === undefined) {
         indexPage = await GUI.getPage('html/index.html');
     }
 
-    // $('#main').show(200)
-    $('#main').html(indexPage);
+    document.getElementById('main').innerHTML = indexPage;
+
     GUI.hideItems();
-    $('#portfolio').removeClass('active');
 
     GUI.addYear(2023, 'publications');
     GUI.addPublication(
@@ -78,36 +84,23 @@ async function index() {
         }
     );
 
-    // $('#main').show();
-
     GUI.showItems();
 }
 
 
 async function portfolio() {
-    GUI.toggleDarkMode();
+    // GUI.toggleDarkMode();
+    document.getElementById('about').classList.remove('active');
+    document.getElementById('portfolio').classList.add('active');
 
-    $('#about').removeClass('active');
     if (portfolioPage === undefined) {
         portfolioPage = await GUI.getPage('html/portfolio.html');
     }
 
-    $('#main').hide();
-    $('#main').html(portfolioPage);
-    $('#about').removeClass('active');
-    $('#main').fadeIn(50);
-    $('#duopolyBox').hide();
-    $('#pggBox').hide();
-
-
-    $('#duopolyBox').slideDown(800);
-    $('#pggBox').slideDown(1000);
-
-    // await GUI.showPage('html/portfolio.html');
+    document.querySelector('#portfolio').classList.add('active');
+    document.querySelector('#main').innerHTML = portfolioPage;
 
     GUI.setModal('space');
     GUI.setModal('pgg');
     GUI.setModal('duopoly')
-
-    // $('#demoPGG').click(createPGGGame);
 }
