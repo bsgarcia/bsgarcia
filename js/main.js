@@ -74,7 +74,7 @@ async function index() {
                     cognitive features can impact market dynamics</h1>
                         <h2>Nioche, A.*, <b>Garcia, B.*</b>, Boraud, T., Rougier, N. P., & Bourgeois-Gironde, S. (2019)
                         </h2>
-                        <h3>Palgrave Communications (Humanities and Social Sciences Communications - Nature)</b></h3>`
+                        <h3><b>Palgrave Communications (Humanities and Social Sciences Communications - Nature)</b></h3>`
         }
     );
 
