@@ -39,7 +39,7 @@ async function index() {
             href: 'https://www.nature.com/articles/s41562-022-01496-3',
             html: `<h1> Experiential values are underweighted in decisions involving symbolic options</h1>
                         <h2><b>Garcia, B.</b>, Lebreton, M., Bourgeois-Gironde, S. & Palminteri, S. </h2>
-                        <h3>Nature Human Behaviour</h3>`
+                        <h3><b>Nature Human Behaviour</b></h3>`
 
             // tag: 'in press'
         }
@@ -52,7 +52,7 @@ async function index() {
             html: `<h1>The description–experience gap: a challenge for the neuroeconomics of decision-making under
                             uncertainty</h1>
                         <h2><b>Garcia, B.</b>, Cerrotti, F., & Palminteri, S. (2021)</h2>
-                        <h3>Philosophical Transactions of the Royal Society B 376 (1819), 20190665 10</h3>`
+                        <h3><b>Philosophical Transactions of the Royal Society B.</b></h3>`
         }
     );
 
@@ -63,8 +63,7 @@ async function index() {
             html: `<h1>Coordination over a unique medium of exchange under information scarcity</h1>
                         <h2>Nioche, A.*, <b>Garcia, B.*</b>, Lefebvre, G., Boraud, T., Rougier, N. P., &
                             Bourgeois-Gironde, S. (2019)</h2>
-                        <h3>Palgrave Communications (Humanities and Social Sciences Communications - Nature), 5(1),
-                            1-11.</h3>`
+                        <h3><b>Palgrave Communications (Humanities and Social Sciences Communications - Nature)</b></h3>`
         }
     );
 
@@ -75,8 +74,7 @@ async function index() {
                     cognitive features can impact market dynamics</h1>
                         <h2>Nioche, A.*, <b>Garcia, B.*</b>, Boraud, T., Rougier, N. P., & Bourgeois-Gironde, S. (2019)
                         </h2>
-                        <h3>Palgrave Communications (Humanities and Social Sciences Communications - Nature), 5(1),
-                            1-11.</h3>`
+                        <h3>Palgrave Communications (Humanities and Social Sciences Communications - Nature)</b></h3>`
         }
     );
 
