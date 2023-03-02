@@ -33,15 +33,15 @@ async function index() {
     GUI.hideItems();
     $('#portfolio').removeClass('active');
 
-    GUI.addYear(2022, 'publications');
+    GUI.addYear(2023, 'publications');
     GUI.addPublication(
         {
-            href: 'https://psyarxiv.com/d59tz/',
-            html: `<h1> The impassable gap between experiential and symbolic values</h1>
+            href: 'https://www.nature.com/articles/s41562-022-01496-3',
+            html: `<h1> Experiential values are underweighted in decisions involving symbolic options</h1>
                         <h2><b>Garcia, B.</b>, Lebreton, M., Bourgeois-Gironde, S. & Palminteri, S. </h2>
                         <h3>Nature Human Behaviour</h3>`,
 
-            tag: 'in press'
+            tag: 'published'
         }
     );
 

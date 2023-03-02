@@ -34,9 +34,15 @@ export class GUI {
         // $('#pgg').show(1200);
         // $('#duopoly').hide(900)
 
-        $('#publications').show(900);
-        $('#teachings').show(1200);
-        $('#poster').show(1500);
+       // $('#publications').show(900);
+       // $('#teachings').show(1200);
+       // $('#poster').show(1500);
+       // // the equivalent of the above lines but in pure javascript
+        document.getElementById('publications').style.display = 'block';
+        document.getElementById('teachings').style.display = 'block';
+
+        
+        
     }
 
     static setModal(name) {
