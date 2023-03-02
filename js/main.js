@@ -27,7 +27,6 @@ function main() {
 }
 
 async function index() {
-
     document.getElementById('portfolio').classList.remove('active');
     document.getElementById('about').classList.add('active');
 
@@ -37,7 +36,7 @@ async function index() {
 
     document.getElementById('main').innerHTML = indexPage;
 
-    GUI.hideItems();
+    // GUI.hideItems();
 
     GUI.addYear(2023, 'publications');
     GUI.addPublication(
@@ -85,6 +84,8 @@ async function index() {
     );
 
     GUI.showItems();
+
+    // GUI.toggleLoading()
 }
 
 
@@ -103,4 +104,6 @@ async function portfolio() {
     GUI.setModal('space');
     GUI.setModal('pgg');
     GUI.setModal('duopoly')
+    
+    GUI.showItems()
 }

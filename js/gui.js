@@ -1,5 +1,30 @@
 export class GUI {
 
+    static toggleLoading() {
+        let el = document.getElementById('page-loading');
+        if (!el.classList.contains('hide')) {
+            el.classList.add('hide')
+        } else {
+            el.classList.remove('hide')
+        }
+    }
+    
+    static show(id) {
+        let el = document.getElementById(id)
+        el.setAttribute('style', 'opacity: 0')
+        setTimeout(() => {
+            el.setAttribute('style', 'opacity: 1;transition: opacity 400ms;')
+        }, 30);
+    }
+
+    static hide(id) {
+        let el = document.getElementById(id)
+        el.setAttribute('style', 'opacity: 1')
+        setTimeout(() => {
+            el.setAttribute('style', 'opacity: 0;transition: opacity 400ms;')
+        }, 30);
+    }
+
     static slideDown(id, time) {
         // TODO: rewrite
         let el = document.getElementById(id);
@@ -36,30 +61,12 @@ export class GUI {
             `<div class="post" onclick="window.open('${href}', '_blank').focus()"> ${tag}${html}</div>`
     }
 
-    static hideItems() {
-        // $('#publications').hide();
-        // $('#teachings').hide();
-        // $('#poster').hide();
-        // equivalent of the above lines but in pure javascript
-        document.getElementById('publications').style.display = 'none';
-        document.getElementById('poster').style.display = 'none';
-        document.getElementById('teachings').style.display = 'none';
-                // $('#about-section').hide();
+    static showItems() {
+        document.querySelectorAll('.box').forEach(el => this.show(el.id))
     }
 
-    static showItems() {
-        // $('#about-section').show(700);
-        // $('#pgg').show(500)
-        // $('#pgg').show(1200);
-        // $('#duopoly').hide(900)
-
-       // $('#publications').show(900);
-       // $('#teachings').show(1200);
-       // $('#poster').show(1500);
-       // // the equivalent of the above lines but in pure javascript
-        document.getElementById('publications').style.display = 'block';
-        document.getElementById('poster').style.display = 'block';
-        document.getElementById('teachings').style.display = 'block';
+    static hideItems() {
+        document.querySelectorAll('.box').forEach(el => this.hide(el.id))
     }
 
     static setModal(name) {
@@ -89,11 +96,20 @@ export class GUI {
     }
 
     static async getPage(file) {
-        document.querySelector('#main').innerHTML = '<div class="spinner"><div></div><div></div><div></div></div>'
+        document.querySelector('#main').innerHTML = `
+            <div id="page-loading" class="screen">
+                <div class="loader">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+       ` 
+        //'<div class="spinner"><div></div><div></div><div></div></div>'
         let text = fetch(file)
             .then(response => response.text())
             .then(text => text);
-        await delay(300);
+        await delay(600);
         return text;
     }
 

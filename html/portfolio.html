@@ -162,18 +162,3 @@
 
     </div>
 </div>
-
-<script>
-    document.getElementById("portfolio").className += " active"
-    function removeLoading() {
-        let el = document.getElementById('loading');
-        el.className = el.className.replace('loading', '');
-    }
-
-    $('#space').ready(function () {
-        if ($(this).height() > 100) {
-            removeLoading();
-            $('#space').css('border', '2px solid black');
-        }
-    });
-</script>
