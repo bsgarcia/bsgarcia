@@ -27,14 +27,13 @@ function main() {
 }
 
 async function index() {
-    document.getElementById('portfolio').classList.remove('active');
-    document.getElementById('about').classList.add('active');
+    GUI.setActivePage('about')
 
     if (indexPage === undefined) {
         indexPage = await GUI.getPage('html/index.html');
     }
 
-    document.getElementById('main').innerHTML = indexPage;
+    GUI.replaceHTML('main', indexPage);
 
     // GUI.hideItems();
 
@@ -91,15 +90,13 @@ async function index() {
 
 async function portfolio() {
     // GUI.toggleDarkMode();
-    document.getElementById('about').classList.remove('active');
-    document.getElementById('portfolio').classList.add('active');
+    GUI.setActivePage('portfolio')
 
     if (portfolioPage === undefined) {
-        portfolioPage = await GUI.getPage('html/portfolio.html');
+        portfolioPage = await GUI.getPage('html/portfolio.html')
     }
 
-    document.querySelector('#portfolio').classList.add('active');
-    document.querySelector('#main').innerHTML = portfolioPage;
+    GUI.replaceHTML('main', portfolioPage);
 
     GUI.setModal('space');
     GUI.setModal('pgg');

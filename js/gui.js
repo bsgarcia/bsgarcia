@@ -1,5 +1,19 @@
 export class GUI {
 
+    static setActivePage(page) {
+        document.getElementById('portfolio').classList.remove('active');
+        document.getElementById('about').classList.remove('active');
+        document.getElementById(page).classList.add('active');
+    }
+    
+    static replaceHTML(id, html) {
+        document.getElementById(id).innerHTML = html;
+    }
+    
+    static appendHTML(id, html) {
+        document.getElementById(id).innerHTML += html;
+    }
+
     static toggleLoading() {
         let el = document.getElementById('page-loading');
         if (!el.classList.contains('hide')) {
@@ -13,7 +27,7 @@ export class GUI {
         let el = document.getElementById(id)
         el.setAttribute('style', 'opacity: 0')
         setTimeout(() => {
-            el.setAttribute('style', 'opacity: 1;transition: opacity 400ms;')
+            el.setAttribute('style', 'opacity: 1;transition: opacity 800ms;')
         }, 30);
     }
 
@@ -21,7 +35,7 @@ export class GUI {
         let el = document.getElementById(id)
         el.setAttribute('style', 'opacity: 1')
         setTimeout(() => {
-            el.setAttribute('style', 'opacity: 0;transition: opacity 400ms;')
+            el.setAttribute('style', 'opacity: 0;transition: opacity 800ms;')
         }, 30);
     }
 
@@ -74,7 +88,6 @@ export class GUI {
         // Get the modal
         const modal = document.getElementById(`${name}Modal`);
 
-
         // Get the image and insert it inside the modal - use its "alt" text as a caption
         const img = document.getElementById(`${name}`);
         const modalImg = document.getElementById(`${name}Img`);
@@ -82,9 +95,6 @@ export class GUI {
         img.onclick = function () {
             modal.style.display = "block";
             modalImg.src = img.src;//this.style.backgroundImage
-                //.replace('url(', '').replace(')', '').replace('"', '').replace('"', '');
-            // captionText.innerHTML = this.alt;
-            // debugger;
         }
 
         // Get the <span> element that closes the modal
