@@ -1280,7 +1280,7 @@ h1.border-bottom {
     color: #3b9b6d;
     font-weight: 700;
     /* font-variant: small-caps; */
-    border-bottom: 2.2px dotted #3b9b6d;
+    /* border-bottom: 2.5px dotted #3b9b6d; */
     width: 100%;
     /* padding-top: 0.5em; */
     margin-bottom: .8em;
@@ -1631,11 +1631,11 @@ a.btn-primary:visited {
 .post:hover {
     margin: 30px 0;
     padding: 20px;
-    border-radius: 2px;
-    background-color: #fff;
+    border-radius: 1em;
+    background-color: #FAFAFA;
     transition: linear 100ms;
     /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24); */
-    border-color: #3b9b6d !important;
+    /* border-color: #3b9b6d !important; */
     cursor: pointer;
     /* font-size: 80%; */
 }
